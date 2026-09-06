@@ -37,6 +37,12 @@ Discuss scope, challenge the task, agree on the goal. Write the handoff file:
 
 ### 2. Hand off (fire and forget for the Tech Lead)
 
+First make your session addressable, employees send `QUESTION:` to this name:
+
+```bash
+herdr agent rename "$HERDR_PANE_ID" tech-lead
+```
+
 ```bash
 # split a sibling pane with the right cwd for the task
 herdr pane split --current --direction right --cwd <task-cwd> --no-focus
@@ -84,8 +90,5 @@ The Senior Engineer hires a reviewer for the final diff/deliverable before appen
 
 ## Rules that keep it stable
 
-- Never type into another agent's pane except for a `QUESTION:`. Panes are also humans' input boxes.
 - One `senior-eng` keeps cross-task context; start `senior-eng-2` only when tasks truly collide.
-- Handoffs and deliverables always use absolute paths so cwd never matters.
 - Old handoffs, inbox files, and decision logs are the company memory: read them before similar new tasks.
-- The user's terminal is never a message bus. Files are the bus; prompts are for decisions only.
